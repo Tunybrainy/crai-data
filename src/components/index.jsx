@@ -11,21 +11,41 @@ import { FaLinkedin, FaTwitter, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 function Index() {
   const [selectedAgency, setSelectedAgency] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  
+  // Filter agencies based on the search term
+  const filteredAgencies = agencies.filter(agency =>
+    agency.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const handleSelect = (agency) => {
     setSelectedAgency(agency);
   };
 
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
     <>
     <div className=" bg-color-2 max-w-full">
-    <div className=" pt-[75px] pl-[100px] flex h-screen font-sora bg-color-2">
+    <div className=" pt-[75px] pl-[100px] mobile:p-[10px] flex md:flex-row lg:flex-row h-full mobile:flex-col font-sora bg-color-2">
       {/* Sidebar List */}
-      <div className="w-1/3 bg-green-800 rounded-lg text-white overflow-y-auto">
-
-        <h2 className="p-4 text-lg font-bold">3,245 Agencies Found</h2>
+      <div className="lg:w-1/3 mobile:w-[100%] bg-green-800 rounded-lg text-white overflow-y-auto">
+      <div className="p-4 flex flex-col items-center justify-between">
+        {/* Search Bar */}
+        <input
+            type="text"
+            placeholder="Search agencies..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className="ml-4 p-2 rounded-md bg-white text-black"
+          />
+        <h2 className="p-4 text-lg font-bold">{filteredAgencies.length} Agencies Found</h2>
+        
+        </div>
         <ul>
-          {agencies.map((agency) => (
+          {filteredAgencies.map((agency) => (
             <li
               key={agency.id}
               onClick={() => handleSelect(agency)}
@@ -39,7 +59,7 @@ function Index() {
       </div>
 
       {/* Detail Card */}
-      <div className="w-[50%] p-4 pt-[75px] bg-color-2">
+      <div className=" mobile:w-[100%] w-[50%] p-4 pt-[75px] bg-color-2">
         {selectedAgency ? (
           <div className="bg-white  rounded-lg shadow-lg p-6">
             <h3 className="text-2xl font-bold">{selectedAgency.name}</h3>

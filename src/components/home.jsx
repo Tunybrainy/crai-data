@@ -6,10 +6,12 @@ function Home() {
     <>
 
     <div
-    className="h-screen w-full max-w-full flex  bg-color-2 "> 
+    className="h-full w-full max-w-full flex  bg-color-2 "> 
     
     <div className=" flex w-full flex-col">
-    <div className=" flex mobile:flex-wrap sm:flex-wrap xsm:flex-wrap
+    <div className=" flex mobile:flex-wrap h-full
+    sm:flex-wrap 
+    xsm:flex-wrap
      md:flex-nowrap justify-center flex-row mb-[70px]">
     <div className=" flex  flex-col mt-[100px] mx-10  ">
       <h1 className="font-sora text-[35px]  mb-[35px] font-semibold text-color-1 animate-slideIn ">

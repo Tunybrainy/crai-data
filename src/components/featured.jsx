@@ -4,14 +4,23 @@ import { FaLinkedin, FaTwitter, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 const Featured = () => {
   return (
-    <div className=" w-full max-w-full bg-color-1 p-8">
-      <h2 className="text-yellow-400 text-3xl font-sora font-bold mb-6">FEATURED AGENCIES</h2>
-      <div className="flex flex-wrap justify-between">
+    <div className=" w-full flex flex-col max-w-full 
+     bg-color-1 p-8">
+      <div className=" flex  xsm:justify-center sm:justify-center 
+      mobile:justify-center ">
+      <h2 className="  text-yellow-400 text-3xl
+      font-sora font-bold mb-6">FEATURED AGENCIES</h2>
+      </div>
+      
+      <div className="flex flex-wrap justify-between 
+      xsm:justify-center sm:justify-center 
+      mobile:justify-center">
         {featuredAgencies.map((agency) => (
           <div
             key={agency.id}
             className="bg-white shadow-lg 
-            p-6 m-4 font-sourceCode w-80 rounded-3xl transition transform hover:scale-105 hover:shadow-2xl cursor-pointer"
+            p-6 m-4 font-sourceCode w-80 rounded-3xl transition transform
+             hover:scale-105 hover:shadow-2xl cursor-pointer"
           >
             {/* Agency Logo */}
             <div className="flex items-center mb-4">

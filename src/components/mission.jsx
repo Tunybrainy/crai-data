@@ -11,10 +11,11 @@ const Mission = () => {
 
   return (
     <>
-    <div className="w-full h-full max-w-full flex bg-color-2"> 
+    <div className="w-full h-full max-w-full flex xsm:justify-items-center mobile:justify-items-center bg-color-2"> 
       <div className="flex w-full flex-wrap mobile:flex-wrap sm:flex-wrap xsm:flex-wrap md:flex-nowrap justify-center flex-row">
         
-        <div className="flex flex-wrap xsm:flex-wrap sm:flex-wrap md:flex-nowrap justify-center flex-row mb-[70px]">
+        <div className="flex flex-wrap xsm:justify-items-center mobile:justify-items-center sm:flex-wrap 
+        md:flex-nowrap justify-center flex-row mb-[70px]">
           {/* Left Section */}
           <div className="flex flex-col mt-[100px] ml-[30px] sm:ml-[60px] mr-5 sm:mr-10">
             <h1 className="font-sora text-[28px] sm:text-[35px] font-semibold text-color-1">
@@ -27,8 +28,10 @@ const Mission = () => {
           </div>
           
           {/* Right Section */}
-          <div className="flex flex-col mt-[50px] sm:mt-[80px] ml-[150px] sm:ml-[200px] mx-5 sm:mx-10">
-            <h1 className="font-sora text-[28px] sm:text-[35px] pl-0 sm:pl-[150px] pb-[15px] font-semibold text-color-1">
+          <div className="flex flex-col mt-[50px] sm:mt-[80px] lg:ml-[150px]  mobile:justify-center
+          mx-5 ">
+            <h1 className="font-sora text-[28px] sm:text-[35px] pl-0  pb-[15px] 
+            font-semibold text-color-1">
               MISSION
             </h1>
             <p className="font-sora text-[18px] sm:text-[20px] font-normal text-color-1">
@@ -44,8 +47,11 @@ const Mission = () => {
               • Companies that have vacancies, that need good recruiters to partner with.
             </p>
   
-            <div className="font-sora animate-bounce mt-[30px] sm:mt-[50px] flex text-[18px] sm:text-[20px] pl-0 sm:pl-[175px] pt-6 flex-wrap gap-2">
-              <a href="#" onClick={handleButtonClick} className="inline-block px-4 py-2 bg-color-1 text-color-2 border border-green-900 rounded-full hover:bg-white hover:text-color-1">
+            <div className="font-sora animate-bounce mt-[30px]  mobile:justify-center xsm:ml-[200px]
+             sm:mt-[50px] flex 
+            text-[18px] sm:text-[20px] pl-0  pt-6 flex-wrap gap-2">
+              <a href="#" onClick={handleButtonClick} className="inline-block px-4 py-2 bg-color-1
+               text-color-2 border border-green-900 rounded-full hover:bg-white hover:text-color-1">
                 Submit a Request
               </a>
             </div>

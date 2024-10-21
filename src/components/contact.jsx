@@ -25,8 +25,9 @@ function Contact() {
           </div>
           
           {/* Info Section */}
-          <div className="flex flex-col mt-[50px] md:mt-[80px] mx-5 md:ml-[150px]">
-            <h1 className="font-sora text-[18px] sm:text-[20px] pl-[10px] font-semibold text-color-1">Phase 1: UK</h1>
+          <div className="  mobile:mx-0 mobile:ml-[125px] 
+          mobile:flex-wrap xsm:flex-wrap  sm:ml-80 sm:mx-5 flex flex-col ml-[250px] mt-[80px] mx-10">
+            <h1 className="  font-sora text-[18px] sm:text-[20px] pl-[10px] font-semibold text-color-1">Phase 1: UK</h1>
             <h1 className="font-sora text-[50px] sm:text-[70px] font-bold text-black">886</h1>
             <h1 className="font-sora text-[18px] sm:text-[20px] pl-[20px] font-semibold text-color-1">Agencies</h1>
           </div>
